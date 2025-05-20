@@ -4,10 +4,11 @@ EXPOSE 8501
 
 RUN apt-get update && apt-get install -y \
     build-essential \
+    poppler-utils \
     software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/*
-
+    
 WORKDIR /app
 
 COPY . /app
