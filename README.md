@@ -42,6 +42,10 @@ docker images -a
 ```bash
 nano ~/Calorie_Count-GenAI-App/.env
 ```
+Inside the nano editor, add your environment variable like this:
+```bash
+GOOGLE_API_KEY=your_google_api_key_here
+```
 Then save and exit:
 Press Ctrl + O, then Enter, then Ctrl + X.
 
