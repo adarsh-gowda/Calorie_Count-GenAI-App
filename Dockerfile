@@ -1,14 +1,16 @@
-FROM python:3.12-slim
+FROM python:3.12
 
 EXPOSE 8501
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     build-essential \
     poppler-utils \
     software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-    
+    git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 
 COPY . /app
