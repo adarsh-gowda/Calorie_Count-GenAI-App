@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY . /app
 
-COPY .env .env
+# COPY .env .env
 
 RUN pip install --no-cache-dir -r requirements.txt
 
